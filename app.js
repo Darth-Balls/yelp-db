@@ -22,4 +22,4 @@ app.use('/restaurants', restaurants)
 app.use('/cities', cities);
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Started up server on http://localhost:${port}`.rainbow.bold.inverse));
+app.listen(process.env.PORT || port, () => console.log(`Started up server on http://localhost:${port}`.rainbow.bold.inverse));
