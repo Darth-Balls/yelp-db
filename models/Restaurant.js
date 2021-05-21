@@ -11,18 +11,18 @@ const RestaurantSchema = new Schema({
     type: String,
     required: [true, 'Please add a name'],
   },
-  // rating: {
-  //     type: Number,
-  //     required: [true, 'please rate me'],
-  // },
-  // description: {
-  //     type: String,
-  //     required: [true, 'tell me what I am'],
-  // },
-  // image: {
-  //     type: String,
-  //     required: true,
-  // },
+  rating: {
+      type: Number,
+      required: [true, 'please rate me'],
+  },
+  description: {
+      type: String,
+      required: [true, 'tell me what I am'],
+  },
+  image: {
+      type: String,
+      required: true,
+  },
   tags: {
     type: [mongoose.Schema.ObjectId],
     ref: 'Tag',
