@@ -6,6 +6,7 @@ const port = process.env.PORT || 5000;
 
 const restaurants = require('./api/restaurants');
 const cities = require('./api/cities');
+const tags = require('./api/tags'); // very very important to include this quote Adam: very important something is working!
 const errorHandler = require('./middlewares/error')
 const connectDB = require('./dbinit');
 
@@ -20,6 +21,7 @@ app.use(express.json());
 // app.get('/', (req, res) => res.send('hello!'))
 app.use('/restaurants', restaurants)
 app.use('/cities', cities);
+// app.use('/tags', tags);  // this one doesn't work
 app.use(errorHandler);
 
 app.listen(process.env.PORT || port, () => console.log(`Started up server on http://localhost:${port}`.rainbow.bold.inverse));
