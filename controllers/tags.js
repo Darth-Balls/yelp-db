@@ -7,7 +7,17 @@ const Tag = require('../models/Tag');
 
 
 const getTags = async (req, res, next) => {
-  try {
+  try {        
+    const tags = await Tag.find();
+    res.json({
+        success: true,
+        msg: "show all Tags",
+        data: tags,
+    });
+} catch (err) {
+    next(err);
+}
+};
 
 const getTag = async (req, res, next) => {
   try {
@@ -29,4 +39,4 @@ const getTag = async (req, res, next) => {
 module.exports = {
   getTag,
   getTags,
- }
+ };
