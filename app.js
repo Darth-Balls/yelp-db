@@ -25,7 +25,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.get('/', (req, res) => res.send('hello!'))
 app.use('/restaurants', restaurants)
 app.use('/cities', cities);
-app.use('/tags', tags);  // this one doesn't work
+
+
+
+// app.use('/tags', tags);  
+
 app.use(errorHandler);
 
 app.listen(process.env.PORT || port, () => console.log(`Started up server on http://localhost:${port}`.rainbow.bold.inverse));

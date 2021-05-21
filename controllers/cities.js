@@ -6,7 +6,6 @@ const City = require('../models/City');
 const getCities = async (req, res, next) => {
   try {
     const cities = await City.find();
-
     res.json({
       success: true,
       msg: 'show all cities',
@@ -15,8 +14,7 @@ const getCities = async (req, res, next) => {
   } catch(err) {
     next(err)
   }
-
-}
+};
 
 const getCity = async (req, res, next) => {
   try {
@@ -32,7 +30,7 @@ const getCity = async (req, res, next) => {
     next(err)
   }
 
-}
+};
 
 module.exports = {
   getCity,
