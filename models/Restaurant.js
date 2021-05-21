@@ -27,7 +27,7 @@ const RestaurantSchema = new Schema({
     type: [mongoose.Schema.ObjectId],
     ref: 'Tag',
     required: [true, 'Please add a tag'],
-  }
+  },
 });
 
 module.exports = mongoose.model('Restaurant', RestaurantSchema);
