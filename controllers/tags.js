@@ -1,20 +1,13 @@
 const mongoose = require("mongoose");
+
+
 // const Restaurant = require('../models/Restaurant');
+
 const Tag = require('../models/Tag');
 
 
 const getTags = async (req, res, next) => {
   try {
-    const tags = await Tag.find();
-    res.json({
-      success: true,
-      msg: 'show all tags',
-      data: tags,
-    })  
-  } catch(err) {
-    next(err)
-  }
-};
 
 const getTag = async (req, res, next) => {
   try {
@@ -27,9 +20,11 @@ const getTag = async (req, res, next) => {
       data: tag,
     })
   } catch(err) {
+
     next(err);
   }
 };
+
 
 module.exports = {
   getTag,
